@@ -15,3 +15,11 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+<form>
+<div className="mb-3">
+  <label for="myBox" class="form-label">Text Area</label>
+  <textarea className="form-control" id="myBox" rows="5"></textarea>
+</div>
+
+</form>

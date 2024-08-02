@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+// import Alert from './components/Alert';
+import About from './components/About';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import TextForm from './components/Textform';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       <BrowserRouter>
+            <Navbar title="TextUtils" aboutText="About"/>
+            <Routes>
+              <Route exact path="/" element={<TextForm heading="Enter the text to analyze" />}/>
+              <Route exact path="/about" element={<About/>}/>
+            </Routes>
+       </BrowserRouter>
+    </>
   );
 }
 
-export default App;
+
+
+export default App
+  
